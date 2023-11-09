@@ -9,6 +9,10 @@
   height: 80px;
 }
 
+.page-title {
+  font-family: 'Hylia Serif', serif;
+}
+
 .triforce-icon {
   width: 50px;
 }

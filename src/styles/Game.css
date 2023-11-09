@@ -8,3 +8,12 @@
   height: calc(100vh - 80px);
   padding-top: 80px;
 }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}

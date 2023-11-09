@@ -8,6 +8,10 @@ const Game = () => {
       <div className="main">
         <div className="card-grid">
           <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
     </>

@@ -1,0 +1,17 @@
+.card {
+  width: 200px;
+  /* border: 1px solid white; */
+}
+
+.card-img {
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: 2px solid lightblue;
+}
+
+.card-title {
+  font-family: 'Proxima Nova';
+  color: lightblue;
+  text-align: center;
+}
