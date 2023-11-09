@@ -1,4 +1,3 @@
-import React from 'react';
 import cardImg from '../assets/testImg.png';
 import '../styles/Card.css';
 

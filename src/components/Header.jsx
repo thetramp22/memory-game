@@ -1,4 +1,3 @@
-import React from 'react';
 import triforce from '../assets/Triforce.svg';
 import '../styles/Header.css';
 
