@@ -1,5 +1,5 @@
-import cardImg from '../assets/testImg.png';
 import '../styles/Card.css';
+import PropTypes from 'prop-types';
 
 const Card = ({ name, image }) => {
   return (
@@ -8,6 +8,11 @@ const Card = ({ name, image }) => {
       <h2 className="card-title">{name}</h2>
     </div>
   );
+};
+
+Card.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default Card;
