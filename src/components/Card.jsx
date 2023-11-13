@@ -1,11 +1,11 @@
 import cardImg from '../assets/testImg.png';
 import '../styles/Card.css';
 
-const Card = () => {
+const Card = ({ name, image }) => {
   return (
     <div className="card">
-      <img className="card-img" src={cardImg} alt="Image name" />
-      <h2 className="card-title">Test Card</h2>
+      <img className="card-img" src={image} alt={name} />
+      <h2 className="card-title">{name}</h2>
     </div>
   );
 };
