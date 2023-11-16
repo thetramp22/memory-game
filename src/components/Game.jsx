@@ -2,8 +2,9 @@ import '../styles/Game.css';
 import Card from './Card';
 import cardInfo from '../assets/data/cardInfo';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const Game = () => {
+const Game = ({ endGame, addScore, resetGame }) => {
   const [positions, setPositions] = useState(
     cardInfo.map((value, index) => index)
   );
@@ -35,6 +36,9 @@ const Game = () => {
                 name={cardInfo[position].name}
                 image={cardInfo[position].image}
                 randomizeCards={randomizeCards}
+                endGame={endGame}
+                addScore={addScore}
+                resetGames={resetGame}
               />
             );
           })}
@@ -42,6 +46,12 @@ const Game = () => {
       </div>
     </>
   );
+};
+
+Game.propTypes = {
+  endGame: PropTypes.func,
+  addScore: PropTypes.func,
+  resetGame: PropTypes.bool,
 };
 
 export default Game;

@@ -1,16 +1,16 @@
 .page-heading {
   background-color: #222;
   color: #eee;
+}
+
+.page-title {
+  font-family: 'Hylia Serif', serif;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 20px;
   height: 80px;
-}
-
-.page-title {
-  font-family: 'Hylia Serif', serif;
 }
 
 .triforce-icon {
