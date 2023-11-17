@@ -1,9 +1,4 @@
 .main {
-  background-image: url('../assets/sheikah_system_wallpaper_2560_1600_by_sunnytp_dcmyp5y.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
   width: 100%;
   height: calc(100vh - 80px);
   padding-top: 80px;

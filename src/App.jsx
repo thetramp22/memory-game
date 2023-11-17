@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Game from './components/Game';
 import Header from './components/Header';
+import './styles/App.css';
 
 function App() {
   const [currentScore, setCurrentScore] = useState(0);
@@ -22,8 +23,10 @@ function App() {
 
   return (
     <>
-      <Header currentScore={currentScore} highScore={highScore} />
-      <Game endGame={endGame} addScore={addScore} resetGame={resetGame} />
+      <div className="app-container">
+        <Header currentScore={currentScore} highScore={highScore} />
+        <Game endGame={endGame} addScore={addScore} resetGame={resetGame} />
+      </div>
     </>
   );
 }

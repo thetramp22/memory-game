@@ -1,0 +1,8 @@
+.app-container {
+  background-image: url('../assets/images/sheikahSlateBG.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 100vh;
+}
