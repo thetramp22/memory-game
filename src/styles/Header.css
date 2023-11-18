@@ -1,6 +1,10 @@
 .page-heading {
   background-color: transparent;
   color: #eee;
+  font-family: 'Proxima Nova', sans-serif;
+  color: lightblue;
+
+  height: 100px;
 }
 
 .page-title {
@@ -15,4 +19,12 @@
 
 .triforce-icon {
   width: 50px;
+}
+
+.scores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
 }

@@ -1,8 +1,11 @@
 .app-container {
-  background-image: url('../assets/images/sheikahSlateBG.png');
+  background-image: url('../assets/images/sheikah_slate_wallpaper_by_sarinilli_db40763.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   height: 100vh;
+
+  position: relative;
+  overflow-y: hidden;
 }

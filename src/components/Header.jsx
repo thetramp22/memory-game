@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 const Header = ({ currentScore, highScore }) => {
   return (
     <div className="page-heading">
-      <div className="page-title">
+      {/* <div className="page-title">
         <img className="triforce-icon" src={triforce} alt="Triforce icon" />
         <h1>Memory Game</h1>
         <img className="triforce-icon" src={triforce} alt="Triforce icon" />
-      </div>
-      <div>
+      </div> */}
+      <div className="scores">
         <h2>
           Score: <span>{currentScore}</span>
         </h2>
