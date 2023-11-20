@@ -1,7 +1,24 @@
 .main {
   width: 100%;
   height: calc(100vh - 80px);
-  padding-top: 80px;
+  padding-top: 50px;
+  overflow-y: auto;
+}
+
+.main::-webkit-scrollbar {
+  width: 15px;
+}
+
+.main::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 12px lightblue;
+  border-radius: 10px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  width: 12px;
+  background-color: lightblue;
+  -webkit-box-shadow: inset 0 0 6px rgba(16, 117, 117, 0.8);
+  border-radius: 10px;
 }
 
 .card-grid {

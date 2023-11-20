@@ -31,7 +31,7 @@ const Card = ({
   return (
     <div className="card" onClick={handleClick}>
       <img className="card-img" src={image} alt={name} />
-      <h2 className="card-title">{name}</h2>
+      <h2 className="card-title glow-blue">{name}</h2>
     </div>
   );
 };

@@ -8,6 +8,10 @@
   border: 2px solid transparent;
   border-radius: 5px;
   outline: 2px solid lightblue;
+  box-shadow:
+    /* White glow */ 0 0 1px lightblue, 0 0 3px lightblue,
+    /* blue glow */ 0 0 6px rgb(21, 177, 230), 0 0 12px rgb(21, 177, 230),
+    0 0 50px rgb(21, 177, 230);
 }
 
 .card-title {

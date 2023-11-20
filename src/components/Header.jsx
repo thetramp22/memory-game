@@ -10,7 +10,7 @@ const Header = ({ currentScore, highScore }) => {
         <h1>Memory Game</h1>
         <img className="triforce-icon" src={triforce} alt="Triforce icon" />
       </div> */}
-      <div className="scores">
+      <div className="scores glow-blue">
         <h2>
           Score: <span>{currentScore}</span>
         </h2>

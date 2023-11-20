@@ -15,3 +15,11 @@
   padding: 0;
   margin: 0;
 }
+
+.glow-blue {
+  color: rgb(215, 223, 226);
+  text-shadow:
+    /* White glow */ 0 0 1px lightblue, 0 0 3px lightblue,
+    /* blue glow */ 0 0 6px rgb(21, 177, 230), 0 0 12px rgb(21, 177, 230),
+    0 0 50px rgb(21, 177, 230);
+}
