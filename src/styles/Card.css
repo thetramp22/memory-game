@@ -1,6 +1,11 @@
 .card {
   width: 150px;
   /* border: 1px solid white; */
+  transition: transform ease-in-out 0.1s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card-img {
@@ -8,6 +13,9 @@
   border: 2px solid transparent;
   border-radius: 5px;
   outline: 2px solid lightblue;
+}
+
+.card-img:hover {
   box-shadow:
     /* White glow */ 0 0 1px lightblue, 0 0 3px lightblue,
     /* blue glow */ 0 0 6px rgb(21, 177, 230), 0 0 12px rgb(21, 177, 230),

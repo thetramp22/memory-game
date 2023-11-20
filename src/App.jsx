@@ -2,11 +2,13 @@ import { useState } from 'react';
 import Game from './components/Game';
 import Header from './components/Header';
 import './styles/App.css';
+import StartModal from './components/StartModal';
 
 function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [resetGame, setResetGame] = useState(true);
+  const [gameState, setGameState] = useState('start');
 
   const endGame = () => {
     if (currentScore > highScore) {
@@ -21,11 +23,19 @@ function App() {
     setResetGame(false);
   };
 
+  const handleClick = () => {
+    setGameState('game');
+  };
+
   return (
     <>
       <div className="app-container">
         <Header currentScore={currentScore} highScore={highScore} />
-        <Game endGame={endGame} addScore={addScore} resetGame={resetGame} />
+        {gameState === 'start' ? (
+          <StartModal handleClick={handleClick} />
+        ) : gameState === 'game' ? (
+          <Game endGame={endGame} addScore={addScore} resetGame={resetGame} />
+        ) : null}
       </div>
     </>
   );
