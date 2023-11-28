@@ -8,6 +8,10 @@
   src: url('./assets/fonts/HyliaSerifBeta-Regular.otf');
 }
 
+:root {
+  --color-orange: rgb(233, 143, 39);
+}
+
 *,
 *::before,
 *::after {

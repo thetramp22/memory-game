@@ -9,6 +9,7 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [resetGame, setResetGame] = useState(true);
   const [gameState, setGameState] = useState('start');
+  const [difficulty, setDifficulty] = useState('easy');
 
   const endGame = () => {
     if (currentScore > highScore) {
@@ -23,8 +24,18 @@ function App() {
     setResetGame(false);
   };
 
-  const handleClick = () => {
+  const handleClickStart = () => {
     setGameState('game');
+  };
+
+  const handleClickDifficulty = (e) => {
+    if (e.target.id === 'easy') {
+      setDifficulty('easy');
+    } else if (e.target.id === 'medium') {
+      setDifficulty('medium');
+    } else if (e.target.id === 'hard') {
+      setDifficulty('hard');
+    }
   };
 
   return (
@@ -32,9 +43,18 @@ function App() {
       <div className="app-container">
         <Header currentScore={currentScore} highScore={highScore} />
         {gameState === 'start' ? (
-          <StartModal handleClick={handleClick} />
+          <StartModal
+            handleClickStart={handleClickStart}
+            handleClickDifficulty={handleClickDifficulty}
+            difficulty={difficulty}
+          />
         ) : gameState === 'game' ? (
-          <Game endGame={endGame} addScore={addScore} resetGame={resetGame} />
+          <Game
+            endGame={endGame}
+            addScore={addScore}
+            resetGame={resetGame}
+            difficulty={difficulty}
+          />
         ) : null}
       </div>
     </>

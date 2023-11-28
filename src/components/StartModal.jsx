@@ -2,7 +2,11 @@ import PropTypes from 'prop-types';
 import triforce from '../assets/Triforce.svg';
 import '../styles/StartModal.css';
 
-const StartModal = ({ handleClick }) => {
+const StartModal = ({
+  handleClickStart,
+  handleClickDifficulty,
+  difficulty,
+}) => {
   return (
     <div className="start-modal-container">
       <div className="start-modal">
@@ -17,7 +21,40 @@ const StartModal = ({ handleClick }) => {
           click. The game ends if you click on any card a second time, or you
           have successfully clicked on every card.
         </p>
-        <button className="btn text-modal glow-blue" onClick={handleClick}>
+        <h2 className="text-modal instruction-title glow-blue">Difficulty</h2>
+        <div className="choice-container">
+          <button
+            id="easy"
+            className={
+              'choice text-modal' +
+              (difficulty == 'easy' ? ' active' : ' glow-blue')
+            }
+            onClick={handleClickDifficulty}
+          >
+            Easy
+          </button>
+          <button
+            id="medium"
+            className={
+              'choice text-modal' +
+              (difficulty == 'medium' ? ' active' : ' glow-blue')
+            }
+            onClick={handleClickDifficulty}
+          >
+            Medium
+          </button>
+          <button
+            id="hard"
+            className={
+              'choice text-modal' +
+              (difficulty == 'hard' ? ' active' : ' glow-blue')
+            }
+            onClick={handleClickDifficulty}
+          >
+            Hard
+          </button>
+        </div>
+        <button className="btn text-modal glow-blue" onClick={handleClickStart}>
           Start Game
         </button>
       </div>
@@ -26,7 +63,9 @@ const StartModal = ({ handleClick }) => {
 };
 
 StartModal.propTypes = {
-  handleClick: PropTypes.func,
+  handleClickStart: PropTypes.func,
+  handleClickDifficulty: PropTypes.func,
+  difficulty: PropTypes.string,
 };
 
 export default StartModal;

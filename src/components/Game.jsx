@@ -4,9 +4,18 @@ import cardInfo from '../assets/data/cardInfo';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Game = ({ endGame, addScore, resetGame }) => {
+const Game = ({ endGame, addScore, resetGame, difficulty }) => {
+  let cards = [];
+  if (difficulty === 'easy') {
+    cards = cardInfo.slice(0, 5);
+  } else if (difficulty === 'medium') {
+    cards = cardInfo.slice(0, 10);
+  } else if (difficulty === 'hard') {
+    cards = cardInfo.slice(0, 15);
+  }
+
   const [positions, setPositions] = useState(
-    cardInfo.map((value, index) => index)
+    cards.map((value, index) => index)
   );
 
   const shuffleArray = (array) => {
@@ -52,6 +61,7 @@ Game.propTypes = {
   endGame: PropTypes.func,
   addScore: PropTypes.func,
   resetGame: PropTypes.bool,
+  difficulty: PropTypes.string,
 };
 
 export default Game;
