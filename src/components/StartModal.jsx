@@ -17,7 +17,7 @@ const StartModal = ({
         </div>
         <h2 className="text-modal instruction-title glow-blue">How to Play</h2>
         <p className="text-modal instruction glow-blue">
-          Try to click on each card once. The cards with shuffle with each
+          Try to click on each card once. The cards will shuffle with each
           click. The game ends if you click on any card a second time, or you
           have successfully clicked on every card.
         </p>
