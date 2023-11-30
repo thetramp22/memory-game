@@ -8,8 +8,8 @@ const StartModal = ({
   difficulty,
 }) => {
   return (
-    <div className="start-modal-container">
-      <div className="start-modal">
+    <div className="modal-container">
+      <div className="modal">
         <div className="page-title">
           <img className="triforce-icon" src={triforce} alt="Triforce icon" />
           <h1>Memory Game</h1>

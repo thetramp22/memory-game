@@ -1,4 +1,4 @@
-.start-modal-container {
+.modal-container {
   width: 100%;
   height: calc(100vh - 50px);
   padding: 0 0 50px;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.start-modal {
+.modal {
   max-width: 600px;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
