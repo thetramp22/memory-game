@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import triforce from '../assets/Triforce.svg';
 
-const EndModal = ({ score, maxScore, handleRetry, handleRestart }) => {
+const EndModal = ({ didWin, handleRetry, handleRestart }) => {
   const gameOver = (
     <>
       <div className="page-title">
@@ -9,11 +9,13 @@ const EndModal = ({ score, maxScore, handleRetry, handleRestart }) => {
         <h1>Game Over</h1>
         <img className="triforce-icon" src={triforce} alt="Triforce icon" />
       </div>
-      <button className="btn text-modal glow-blue">Try Again?</button>
+      <button className="btn text-modal glow-blue" onClick={handleRetry}>
+        Try Again?
+      </button>
     </>
   );
 
-  const restart = (
+  const youWin = (
     <>
       <div className="page-title">
         <img className="triforce-icon" src={triforce} alt="Triforce icon" />
@@ -26,16 +28,17 @@ const EndModal = ({ score, maxScore, handleRetry, handleRestart }) => {
   return (
     <div className="modal-container">
       <div className="modal">
-        {score === maxScore ? restart : gameOver}
-        <button className="btn text-modal glow-blue">Start Over</button>
+        {didWin ? youWin : gameOver}
+        <button className="btn text-modal glow-blue" onClick={handleRestart}>
+          Start Over
+        </button>
       </div>
     </div>
   );
 };
 
 EndModal.propTypes = {
-  score: PropTypes.number,
-  maxScore: PropTypes.number,
+  didWin: PropTypes.bool,
   handleRetry: PropTypes.func,
   handleRestart: PropTypes.func,
 };
