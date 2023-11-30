@@ -10,4 +10,8 @@ Find a live demo of the project [here](https://memory-game-loz.netlify.app/).
 
 ### Screenshot
 
+<<<<<<< HEAD
 ![](./assets/images/game-screenshot.png)
+=======
+![](./images/game-screenshot.png)
+>>>>>>> b3ff9d69ff337ce124ace50c7395a65e8759d74b
