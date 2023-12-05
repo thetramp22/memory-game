@@ -1,0 +1,30 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: -50px;
+
+  font-family: 'Proxima Nova', sans-serif;
+  color: lightblue;
+  font-size: 25px;
+}
+
+.social {
+  color: lightblue;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease-in-out 0.3s;
+  margin-left: 5px;
+}
+
+.social:hover {
+  text-shadow:
+    /* White glow */ 0 0 1px lightblue, 0 0 3px lightblue,
+    0 0 5px lightblue, /* blue glow */ 0 0 6px var(--color-orange),
+    0 0 12px var(--color-orange), 0 0 25px var(--color-orange),
+    0 0 50px var(--color-orange), 0 0 75px var(--color-orange),
+    0 0 100px var(--color-orange);
+  transform: scale(1.1);
+}

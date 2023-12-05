@@ -4,6 +4,7 @@ import Header from './components/Header';
 import './styles/App.css';
 import StartModal from './components/StartModal';
 import EndModal from './components/EndModal';
+import Footer from './components/Footer';
 
 function App() {
   const [currentScore, setCurrentScore] = useState(0);
@@ -95,6 +96,7 @@ function App() {
             handleRetry={handleRetry}
           />
         ) : null}
+        <Footer />
       </div>
     </>
   );
